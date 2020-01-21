@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+items;
+ checkoutForm;
+
+  constructor(
+    private cartService: CartService,
+     private formBuilder: FormBuilder,
+  ) { }
 
   ngOnInit() {
+     this.items = this.cartService.getItems();
   }
 
 }
