@@ -11,7 +11,7 @@ import { FormBuilder } from '@angular/forms';
 export class CartComponent implements OnInit {
 
 items;
- checkoutForm;
+checkoutForm;
 
   constructor(
     private cartService: CartService,
